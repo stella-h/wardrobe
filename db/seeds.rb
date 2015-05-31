@@ -23,4 +23,5 @@ t1 = Tag.create :tag => 'Jeans'
 t2 = Tag.create :tag => 'Blouse'
 t3 = Tag.create :tag => 'Shirts'
 
-u1 << o1
+u1.outfits << o1 << o2
+
