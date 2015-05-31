@@ -13,7 +13,6 @@ Tag.destroy_all
 
 u1 = User.create :name => 'Jane'
 u2 = User.create :name => 'Mitch'
-u3 = User.create :name => 'Stefan'
 
 o1 = Outfit.create :title => 'Weekendwear'
 o2 = Outfit.create :title => 'Party'
@@ -24,4 +23,12 @@ t2 = Tag.create :tag => 'Blouse'
 t3 = Tag.create :tag => 'Shirts'
 
 u1.outfits << o1 << o2
+u2.tags << t1 << t3
+
+o1.tags << t1 << t2
+o2.tags << o3 << 
+
+t1.outfits << o1 << o2
+t2.outfits << o1 << o2
+
 
