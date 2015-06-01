@@ -26,7 +26,7 @@ u1.outfits << o1 << o2
 u2.tags << t1 << t3
 
 o1.tags << t1 << t2
-o2.tags << o3 << 
+o2.tags << t1
 
 t1.outfits << o1 << o2
 t2.outfits << o1 << o2
