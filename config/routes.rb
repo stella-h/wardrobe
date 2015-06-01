@@ -27,49 +27,14 @@
 
 Rails.application.routes.draw do
 
-  get 'tags/index'
+  get 'session/new'
 
-  get 'tags/create'
+  get 'session/create'
 
-  get 'tags/new'
+  get 'session/destroy'
 
-  get 'tags/edit'
-
-  get 'tags/show'
-
-  get 'tags/update'
-
-  get 'tags/destroy'
-
-  get 'outfits/index'
-
-  get 'outfits/create'
-
-  get 'outfits/new'
-
-  get 'outfits/edit'
-
-  get 'outfits/show'
-
-  get 'outfits/update'
-
-  get 'outfits/destroy'
-
-  get 'users/index'
-
-  get 'users/create'
-
-  get 'users/new'
-
-  get 'users/edit'
-
-  get 'users/show'
-
-  get 'users/update'
-
-  get 'users/destroy'
-
-root :to => 'pages#home'
-
+  resources :tags
+  resources :users
+  resources :outfits
 
 end
