@@ -1,3 +1,4 @@
+#this will appear through out the whole website
 #intellinav - changes the view depending on user status
   # user admin - show all the users
   # user logged in - show log out / edit profile
@@ -17,7 +18,7 @@ module ApplicationHelper
 
     #if user is not present, show sign up & log in
     if @current_user.present?
-      nav += '<li>' + link_to("Log in", edit_user_path + '</li>'
+      nav += '<li>' + link_to("Log in", edit_user_path) + '</li>'
       nav += '<li>' + link_to("Log out #{ @current_user.name }", login_path, :method => :delete) + '</li>'
     else
       nav += '<li>' + link_to('Sign up', new_user_path) + '</li>'
@@ -25,8 +26,8 @@ module ApplicationHelper
     end
 
       nav 
-    end
   end
+end
 
 
 #keep home button

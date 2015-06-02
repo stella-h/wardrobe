@@ -2,4 +2,14 @@
 <p>Find me in app/views/users/show.html.erb</p>
 OH HI!
 
+
+
+<%= form_for @user do |f| %> 
 <%= @user[:name] %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true, :required => true %>
+</p> 
+
+

@@ -1,4 +1,49 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1> NEW USER VIEW </h1>
 
-- set up form to create a new user (can use _html.erb)
+<!-- - repeated skeleton
+- what new users see 
+- welcome message etc 
+- create new user form goes here (_form.html.erb)
+- intellinav goes in application helper (to not repeat) -->
+
+
+<% if (@user.errors.any?) %>
+  <ol>
+    <%= @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ol>
+<% end %>
+
+
+<!-- for each new user repeat this step -->
+<!-- how to make selected field compulsory???  -->
+<%= render "form" %> <!-- is this how you show form ?????? -->
+
+
+
+
+<!-- 
+<% form_for @user do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %>
+</p>
+<p>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</p>
+<p>
+ <%= f.label :location %> 
+ <%= f.text_field :location  %>
+</p>
+<p>
+  <%= f.label :picture %>
+  <%= f.text_field :picture %>
+</p>
+<p>
+  <%= f.label :submit %>
+  <%= f.submit %>
+</p>
+<% end %>
+ -->

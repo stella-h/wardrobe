@@ -1,10 +1,26 @@
-<h1>Session#new</h1>
-<p>Find me in app/views/session/new.html.erb</p>
+<h1> log in </h1>
+
+<!-- this is creating a new session for user. 
+new users create account, and logs in again to be authenticated with session.
+
+create users -> routed home -> log in with user params in db(created in new users) -> login complete -> stores username and password params for session id -> each time logged in, a unique session id is created. 
+-->
+
+<%= form_tag 'login' do %>
+  <p>
+    <%= label_tag 'username' %>
+    <%= text_field_tag 'username' %>
+  </p>
+
+  <p>
+   <%= label_tag 'password' %> 
+   <%= text_field_tag 'password' %>
+  </p>
+
+  <p>
+    <%= submit_tag 'Login' %>
+  </p>
 
 
 
-- creating a new login for a session within the session, new.html.erb 
-- hardcode the form to be called back in session controller, once login is completed, it will grab username and password params and store for session id. 
 
-- gets linked in the session controller (user new) 
-sign up -> they get log out automatically -> tell them to log in again to create a new session. 

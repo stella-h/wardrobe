@@ -1,0 +1,29 @@
+<!-- this is where the form skeleton be for users. 
+used in edit and new -->
+
+<%= form_for @user do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true, :required => true %>
+</p>
+<p>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+</p>
+<p>
+ <%= f.label :location %> 
+ <%= f.text_field :location  %>
+</p>
+<p>
+  <%= f.label :picture %>
+  <%= f.text_field :picture %>
+</p>
+<p>
+  <%= f.label :submit %>
+  <%= f.submit %>
+</p>
+<% end %>
