@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
 
 # Create new user 
+# typing & displaying the information
 # Where the user lands
   def new
     @user = User.new
@@ -14,10 +15,11 @@ class UsersController < ApplicationController
   
 
 # Where it goes after the new form
+# accepting the information
 # Creates a new user with information as objects to go in the database.
   def create
     @user = User.new user_params #authenticating the user's information. fill in the db with these values.
-    if @user.save                #if it saves,
+    if @user.save                          #if it saves,
       redirect_to "/users/#{ @user.id }"   #redirect to home
     else
       render :new                #if not new form.
@@ -35,7 +37,7 @@ class UsersController < ApplicationController
 
 # SHOWS the edit form
 # Using the current user information to edit BUT  
-# Using the same skeleton (form) from new user, but different flesh ( which is current user defined by user)
+# Using the same skeleton (_form.html.erb), but different flesh ( which is current user defined by user)
   def edit
     @user = @current_user 
     # render :new 
