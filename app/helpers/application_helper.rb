@@ -18,8 +18,8 @@ module ApplicationHelper
 
     #if user is not present, show sign up & log in
     if @current_user.present?
-      nav += '<li>' + link_to("Log in", edit_user_path) + '</li>'
-      nav += '<li>' + link_to("Log out #{ @current_user.name }", login_path, :method => :delete) + '</li>'
+      nav += '<li>' + link_to("Edit profile", edit_user_path(@current_user)) + '</li>'
+      nav += '<li>' + link_to("Log out #{ @current_user.name }", logout_path) + '</li>'
     else
       nav += '<li>' + link_to('Sign up', new_user_path) + '</li>'
       nav += '<li>' + link_to('Log in', login_path) + '</li>'

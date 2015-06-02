@@ -9,7 +9,7 @@
 
 <% if (@user.errors.any?) %>
   <ol>
-    <%= @user.errors.full_messages.each do |msg| %>
+    <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
   </ol>
@@ -19,31 +19,3 @@
 <!-- for each new user repeat this step -->
 <!-- how to make selected field compulsory???  -->
 <%= render "form" %> <!-- is this how you show form ?????? -->
-
-
-
-
-<!-- 
-<% form_for @user do |f| %>
-<p>
-  <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true %>
-</p>
-<p>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-</p>
-<p>
- <%= f.label :location %> 
- <%= f.text_field :location  %>
-</p>
-<p>
-  <%= f.label :picture %>
-  <%= f.text_field :picture %>
-</p>
-<p>
-  <%= f.label :submit %>
-  <%= f.submit %>
-</p>
-<% end %>
- -->

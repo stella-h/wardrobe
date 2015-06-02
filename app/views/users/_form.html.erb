@@ -7,16 +7,20 @@ used in edit and new -->
   <%= f.text_field :name, :autofocus => true, :required => true %>
 </p>
 <p>
+  <%= f.label :username %>
+  <%= f.text_field :username, :required => true %>
+</p>
+<p>
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, :required => true %>
 </p>
 <p>
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation, :required => true %>
 </p>
 <p>
  <%= f.label :location %> 
- <%= f.text_field :location  %>
+ <%= f.text_field :location %>
 </p>
 <p>
   <%= f.label :picture %>

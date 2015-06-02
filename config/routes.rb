@@ -27,11 +27,11 @@
 
 Rails.application.routes.draw do
 
-  get 'session/new'
+  root :to => 'pages#home'
 
-  get 'session/create'
-
-  get 'session/destroy'
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  get '/logout' => 'session#destroy'
 
   resources :tags
   resources :users

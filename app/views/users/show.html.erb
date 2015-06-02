@@ -1,15 +1,11 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-OH HI!
+<h1> SUCCESS ! </h1>
+<h2>Hello <%= @user[:name] %> ! </h2>
+<p> Please log in to start your wardrobe! </p> 
+
+<%== intellinav %>
 
 
 
-<%= form_for @user do |f| %> 
-<%= @user[:name] %>
 
-<p>
-  <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true, :required => true %>
-</p> 
 
 
