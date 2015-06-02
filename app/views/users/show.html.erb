@@ -1,8 +1,16 @@
-<h1> SUCCESS ! </h1>
-<h2>Hello <%= @user[:name] %> ! </h2>
-<p> Please log in to start your wardrobe! </p> 
+<h1> <%= @user[:name] %>  's profile </h1>
+
+<p>Username : <%= @user[:username] %></p>
+<p>Location : <%= @user[:location] %></p>
+<p><%= image_tag @user.picture %></p>
+
 
 <%== intellinav %>
+
+
+
+
+
 
 
 

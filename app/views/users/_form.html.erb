@@ -27,7 +27,11 @@ used in edit and new -->
   <%= f.text_field :picture %>
 </p>
 <p>
-  <%= f.label :submit %>
+  <% if @user.picture %>
+    <%= image_tag @user.picture %>
+  <% end %>
+</p>
+<p>
   <%= f.submit %>
 </p>
 <% end %>

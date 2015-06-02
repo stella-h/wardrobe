@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 # Using the same skeleton (form) from new user, but different flesh ( which is current user defined by user)
   def edit
     @user = @current_user 
-    render :new 
+    # render :new 
   end
 
 
