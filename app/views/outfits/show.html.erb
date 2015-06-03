@@ -1,2 +1,10 @@
-<h1>Outfits#show</h1>
+<h1>show after creating</h1>
 <p>Find me in app/views/outfits/show.html.erb</p>
+
+<%== intellinav %>
+
+<p> Title : <%= @outfit[:title] %> </p>
+<p> About this outfit : <%= @outfit[:description] %> </p>
+<p><%= image_tag @outfit.image %></p>
+
+<%== outfitdash  %>

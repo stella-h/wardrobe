@@ -2,8 +2,13 @@ class OutfitsController < ApplicationController
 #executing ruby commands, controls behaviour
 
 #list all the outfit
+#current user all outfit
   def index
-    @outfit = Outfit.all
+    if @current_user
+      @outfit = @current_user.outfits
+    else 
+      @outfit = Outfit.all
+    end
   end
 
 
@@ -16,23 +21,28 @@ class OutfitsController < ApplicationController
 
 
   def create
-    @outfit = Outfit.new outfit_params
-    if @outfit.save                     #if it saves/works
-      redirect_to outfit_path           #show the individual page
+    @outfit = @current_user.outfits.new outfit_params
+    if @outfit.save                                    #if it saves/works
+      redirect_to "/outfits/#{ @outfit.id }"           #show the individual page
     else
-      render :new                       #if not load form again
+      render :new                                       #if not load form again
     end
   end
 
   def show
+    @outfit = Outfit.find params[:id]
   end
 
-
   def edit
+    @outfit = Outfit.find params[:id]
   end
 
   def update
-  end
+    @outfit = Outfit.find params[:id]
+    @outfit.update outfit_params
+
+    redirect_to outfit_path( @outfit )
+  end 
 
   def destroy
   end

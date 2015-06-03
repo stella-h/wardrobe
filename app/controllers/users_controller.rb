@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params #authenticating the user's information. fill in the db with these values.
     if @user.save                          #if it saves,
-      redirect_to "/users/#{ @user.id }"   #redirect to home
+      redirect_to "/users/#{ @user.id }"   #redirect to their profile page
     else
       render :new                #if not new form.
     end

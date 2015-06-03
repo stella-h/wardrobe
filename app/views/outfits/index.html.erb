@@ -1,2 +1,11 @@
-<h1>Outfits#index</h1>
+<h1> all my outfits</h1>
 <p>Find me in app/views/outfits/index.html.erb</p>
+
+  <br><br>
+  <h3>They are .. </h3>
+  <% @outfit.each do |outfit| %>
+<p><a href="/outfits/<%= outfit.id %>"><%= outfit.title %></a></p>
+
+  <% end %>
+
+<%== userdash  %>
