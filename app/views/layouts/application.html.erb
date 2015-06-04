@@ -3,15 +3,22 @@
 <head>
   <title>Wardrobe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.22/paper-full.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
 </head>
 <body>
 <!-- this links back to homepage --> 
-<h1><a href="/"> my wardrobe </a></h1>
+<!-- <h1 class="header"><a href="/"> w </a></h1> -->
 
-<%= yield %>
+<canvas id="myCanvas" resize></canvas>
 
+<%== intellinav  %>
+<div class="container">
+  <%= yield %>
+</div>
+
+  <%= javascript_include_tag 'chain.js', :type => "text/x-paperscript", :canvas => "myCanvas" %>
 </body>
 </html>

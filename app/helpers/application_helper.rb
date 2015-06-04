@@ -5,30 +5,31 @@
   # user logged out / new user - show log in & new user sign up
 
 module ApplicationHelper
-  def intellinav 
-    nav = '<nav>'
+  def intellinav
+    nav = '<nav>
+    <?xml version="1.0" encoding="utf-8"?>
+    <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
+    <text transform="matrix(1 0 0 1 0.9229 62.7046)" font-family="\'PlutoRegular\'" font-size="71.7677">W</text>
+    </svg>
+    <ul>'
 
-    if @curent_user.present? && @current_user.admin? 
-      nav += '<li>' + link_to('Log out', login_path) + '</li>'
-      nav += '<li>' + link_to('Show Users', users_path) + '</li>' 
-    end
-
-    #if user is present show edit & log out
-    #log out deletes user session
-
-    #if user is not present, show sign up & log in
     if @current_user.present?
-      nav += '<li>' + link_to("Edit profile", edit_user_path(@current_user)) + '</li>'
-      nav += '<li class="log_out">' + link_to("Log out #{ @current_user.name }", logout_path) + '</li>'
+      nav += '<li>' + link_to("#{ @current_user.name }", edit_user_path(@current_user)) + '</li>'      
+      nav += '<li>' + link_to("New Outfit", new_outfit_path) + '</li>'
+      nav += '<li>' + link_to("All my outfits", outfits_path) + '</li>'
+      nav += '<li class="log_out">' + link_to("Log out", logout_path) + '</li>'
     else
-      nav += '<li class="sign_up">' + link_to('Sign up', new_user_path) + '</li>'
       nav += '<li>' + link_to('Log in', login_path) + '</li>'
+      nav += '<li class="sign_up">' + link_to('Sign up', new_user_path) + '</li>'
     end
-
-    nav += "</nav>"
-    nav 
+    nav +='</ul></nav>'
+    nav
   end
 end
+
+
 
 
 #keep home button
