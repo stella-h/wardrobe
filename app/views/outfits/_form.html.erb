@@ -3,20 +3,29 @@
   <%= f.label :title %>
   <%= f.text_field :title, :autofocus => true, :required => true %>
 </p>
+
+<br>
+
 <p>
   <%= f.label :description %>
   <%= f.text_field :description %>
 </p>
+
+<br>
+
 <p>
   <%= f.label :image %>
   <%= f.text_field :image, :required => true %>
 </p>
-<p>
+
+<br>
   <%#= f.label :tag %>
   <%#= f.text_field :tag %>
-</p>
-<p>
   <%= f.submit %>
 </p>
+
+<% if @outfit.image %>
+  <%= image_tag @outfit.image %>
+<% end %>
 
 <% end %>

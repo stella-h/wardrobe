@@ -1,8 +1,11 @@
-<h1>show after creating</h1>
-<p>Find me in app/views/outfits/show.html.erb</p>
-
-
+<div class="look">
+<h1>The Look</h1>
 <p> Title : <%= @outfit[:title] %> </p>
 <p> About this outfit : <%= @outfit[:description] %> </p>
-<p><%= image_tag @outfit.image %></p>
+<p><%= image_tag @outfit.image , :class => 'regular' %></p>
+<p><%=link_to("Edit this outfit", edit_outfit_path) %></p> 
+</div>
+
+<!-- could totally resize this image and make it bigger   -->
+
 

@@ -1,14 +1,21 @@
 <!-- this is where the form skeleton be for users. 
 used in edit and new -->
+<div class="photo">
+  <p>
+    <% if @user.picture %>
+      <%= image_tag @user.picture %>
+    <% end %>
+  </p>
+</div>
 
 <%= form_for @user do |f| %>
 <p>
-  <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true, :required => true %>
-</p>
-<p>
   <%= f.label :username %>
   <%= f.text_field :username, :required => true %>
+</p>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true, :required => true %>
 </p>
 <p>
   <%= f.label :password %>
@@ -26,11 +33,7 @@ used in edit and new -->
   <%= f.label :picture %>
   <%= f.text_field :picture %>
 </p>
-<p>
-  <% if @user.picture %>
-    <%= image_tag @user.picture %>
-  <% end %>
-</p>
+
 <p>
   <%= f.submit %>
 </p>

@@ -1,3 +1,51 @@
 // Place all the styles related to the Outfits controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+
+input:focus {
+    outline:none;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+
+  canvas {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .new-outfit {
+  padding-top: 10vh;
+
+  }
+
+  form.outfits_new, form.outfit_edit {
+    padding-top: 30vh;
+
+  }
+
+  .show {
+    padding-top: 10vh;
+  }
+
+  .collection {
+    padding-top: 10vh;
+  }
+
+  .look {
+    padding-top: 10vh;
+  }
+
+
+}

@@ -1,3 +1,62 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+
+input:focus {
+    outline:none;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+
+  canvas {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+// for any user profile, user new 
+  .show {
+    padding-top: 10vh;
+  }
+
+  .edit {
+    padding-top: 10vh;
+  }
+
+  form.edit_user, form.new_user {
+    display: inline-block;
+    width: 49%;
+    padding-left: 10px;
+  }
+
+  form label {
+    display: inline-block;
+    width: 150px;
+  }  
+
+  div.photo {
+    display: inline-block;
+    width: 49%;
+    padding-left: 0px;
+  }
+
+   input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s;
+  }
+
+  input[type="text"]:focus,
+  input[type="text"].focus,
+  input[type="password"]:focus,
+  input[type="password"].focus {
+    border-bottom: solid 2px #969696;
+  }
+}

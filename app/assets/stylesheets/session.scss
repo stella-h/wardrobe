@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
 
+input:focus {
+    outline:none;
+}
+
 body {
+  background-color: #e8e1cf;
   font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -17,32 +22,22 @@ body {
 
   nav {
     position: fixed;
-    width: 25%;
+    width: 10%;
     left: 0;
-    height: 100vh;
-    top: 0;
-    background: gainsboro;
-    // padding-top: 400px;
-    // width: 40%;
-    // display: inline-block;
-    // float: left;
-    // background-color: #000000;
+    height: 25vh;
+    top: 14vh; 
   }
 
-  nav svg {
-    max-width: 20%;
-    padding-left: 40px;
-    padding-top: 20px;
-  }
-
-  nav li:first-child {
-    // padding-top: 500px;
+  .svg {
+    max-width: 50%;
+    padding-left: 65px;
+    padding-right: 0px;
   }
 
   .container {
     width: 70%;
     position: relative;
-    left: 30%;
+    left: 20%;
     // display: inline-block;
     // // float: left;
     // width: 57%;
@@ -50,7 +45,9 @@ body {
 
 
   li {
-    text-align: left; 
+    text-align: center; 
+    font-size: 15px;
+    text-transform: uppercase;
     list-style: none;
     padding-top: 15px;
     padding-left: 9px;
@@ -62,10 +59,72 @@ body {
     color: #2c6872;
   }
 
-  .edit {
-    text-align: left;
-    position: absolute;
-    position-left: 800px; 
-    display: inline-block; 
+  .regular {
+    max-width: 20em;
   }
+
+  .thumb {
+    max-width: 10em;
+    padding-right: .5em;
+  }
+
+
+// for the right user session page
+  .new {
+    padding-top: 10vh;
+  }
+
+// input[type="text"], input[type="password"] {
+//   padding: 10px;
+//   border: none;
+//   border-bottom: solid 2px #c9c9c9;
+//   transition: border 0.3s;
+// }
+
+// input[type="text"]:focus,
+// input[type="text"].focus,
+// input[type="password"]:focus,
+// input[type="password"].focus {
+//   border-bottom: solid 2px #969696;
+// }
+
+
+  // .edit {
+  //   text-align: left;
+  //   position: absolute;
+  //   position-left: 800px; 
+  //   display: inline-block; 
+  // }
 }
+
+// div.photo {
+//   display: inline-block;
+//   width: 49%;
+// }
+
+// form.edit_user, form.new_user {
+//   display: inline-block;
+//   width: 49%;
+// }
+
+// form label {
+//   display: inline-block;
+//   width: 200px;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

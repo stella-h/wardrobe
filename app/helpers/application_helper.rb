@@ -6,14 +6,7 @@
 
 module ApplicationHelper
   def intellinav
-    nav = '<nav>
-    <?xml version="1.0" encoding="utf-8"?>
-    <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-       viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
-    <text transform="matrix(1 0 0 1 0.9229 62.7046)" font-family="\'PlutoRegular\'" font-size="71.7677">W</text>
-    </svg>
-    <ul>'
+    nav = '<nav><a href="/"><img class="svg" src="/assets/logo.svg"></a><ul>'
 
     if @current_user.present?
       nav += '<li>' + link_to("#{ @current_user.name }", edit_user_path(@current_user)) + '</li>'      
