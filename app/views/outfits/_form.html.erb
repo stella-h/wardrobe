@@ -24,8 +24,12 @@
   <%= f.submit %>
 </p>
 
-<% if @outfit.image %>
-  <%= image_tag @outfit.image %>
 <% end %>
 
-<% end %>
+<div class="photo">
+  <p>
+    <% if @outfit.image %>
+      <%= image_tag @outfit.image %>
+    <% end %>
+  </p>
+</div>

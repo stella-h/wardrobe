@@ -3,10 +3,10 @@ $(document).ready(function () {
   paper.setup(canvas);
 
   var tool = new paper.Tool();
-  var points = 25;
+  var points = 50;
 
   // The distance between the points:
-  var length = 35;
+  var length = 15;
 
   var path = new paper.Path({
     strokeColor: '#f6956b',

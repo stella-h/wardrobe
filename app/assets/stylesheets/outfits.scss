@@ -22,29 +22,37 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
+  }
+
+  nav {
+    z-index: 2;
+  }
+
+  .container {
+    z-index: 2;
   }
 
   .new-outfit {
-  padding-top: 10vh;
+  // padding-top: 10vh;
 
   }
 
   form.outfits_new, form.outfit_edit {
-    padding-top: 30vh;
+    // padding-top: 30vh;
 
   }
 
   .show {
-    padding-top: 10vh;
+    // padding-top: 10vh;
   }
 
   .collection {
-    padding-top: 10vh;
+    // padding-top: 10vh;
   }
 
   .look {
-    padding-top: 10vh;
+    // padding-top: 10vh;
   }
 
 

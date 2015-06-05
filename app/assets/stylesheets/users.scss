@@ -17,19 +17,19 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    // z-index: -1;
   }
 
 // for any user profile, user new 
   .show {
-    padding-top: 10vh;
+    // padding-top: 10vh;
   }
 
   .edit {
-    padding-top: 10vh;
+    // padding-top: 10vh;
   }
 
-  form.edit_user, form.new_user {
+  form.edit_user, form.new_user, form.edit_outfit, form.edit_user, form {
     display: inline-block;
     width: 49%;
     padding-left: 10px;

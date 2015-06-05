@@ -10,6 +10,7 @@ body {
   font-style: normal;
   font-weight: 400;
   text-transform: capitalize;
+  // background-image: (image/background.svg) ; 
 
   canvas {
     width: 100%;
@@ -17,7 +18,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    // z-index: -1;
   }
 
   nav {
@@ -38,6 +39,7 @@ body {
     width: 70%;
     position: relative;
     left: 20%;
+    top: 10vh;
     // display: inline-block;
     // // float: left;
     // width: 57%;
@@ -71,7 +73,7 @@ body {
 
 // for the right user session page
   .new {
-    padding-top: 10vh;
+    // padding-top: 10vh;
   }
 
 // input[type="text"], input[type="password"] {

@@ -1,12 +1,5 @@
 <!-- this is where the form skeleton be for users. 
 used in edit and new -->
-<div class="photo">
-  <p>
-    <% if @user.picture %>
-      <%= image_tag @user.picture %>
-    <% end %>
-  </p>
-</div>
 
 <%= form_for @user do |f| %>
 <p>
@@ -38,3 +31,11 @@ used in edit and new -->
   <%= f.submit %>
 </p>
 <% end %>
+
+<div class="photo">
+  <p>
+    <% if @user.picture %>
+      <%= image_tag @user.picture %>
+    <% end %>
+  </p>
+</div>
