@@ -6,7 +6,7 @@
 
 module ApplicationHelper
   def intellinav
-    nav = '<nav><a href="/"><img class="svg" src="/assets/logo.svg"></a><ul>'
+    nav = "<nav><a href='/''>#{ image_tag 'logo.svg', :class => 'svg' }</a><ul>"
 
     if @current_user.present?
       nav += '<li>' + link_to("#{ @current_user.name }", edit_user_path(@current_user)) + '</li>'      
