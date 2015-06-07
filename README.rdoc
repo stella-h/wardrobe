@@ -23,7 +23,7 @@ The app is still missing a few features as follows. Given time, these things wil
 
 
 
-<i>Thank you to <b>jack & joel</b> for your (un)conditional support. <b>Jack</b> for paper.js & <b>Joel</b> for tagging</i>
+<i>Thank you to <b>jack & joel</b> for your (un)conditional support. <b>Jack</b> for paper.js & <b>Joel</b> for cloud tagging tute</i>
 
 
 <i>Designed & developed for WDI Project 1 at General Assembly</i>
